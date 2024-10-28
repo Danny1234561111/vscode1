@@ -1,0 +1,6 @@
+class HTML():
+    def __init__(self, cls_body):
+        self.child = cls_body
+
+    def __str__(self):
+        return "<html>" + "\n" + self.child.__str__() + "\n" + "</html>"
