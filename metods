@@ -4,6 +4,13 @@ class HTML():
 
     def __str__(self):
         return "<html>" + "\n" + self.child.__str__() + "\n" + "</html>"
+
+class body(HTML):
+    def __init__(self, cls_p, text):
+        self.child = cls_p
+        self.text = text
+    def __str__(self):
+        return "<body>" + "\n" + self.text + "\n" + self.child.__str__() + "\n" + "</body>"
 class p():
     def __init__(self,  text):
         self.text = text
