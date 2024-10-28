@@ -4,3 +4,9 @@ class HTML():
 
     def __str__(self):
         return "<html>" + "\n" + self.child.__str__() + "\n" + "</html>"
+class p():
+    def __init__(self,  text):
+        self.text = text
+    def __str__(self):
+        return "<p>" + "\n" + self.text + "\n" + "</p>"
+print(HTML(body(p("Hello"),"world")))
